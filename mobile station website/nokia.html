@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nokia</title>
+        <style>	
+        * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}	
+		 .menu{
+		 margin-top: 7px;
+		 float:left;
+		 width:16%;
+		 text-align:center;
+		 height:1200px;
+		 background-color:red;
+		 padding-top: 50px;
+		 }
+		 .main{
+		  float:left;
+		  width:65%;
+		  padding:0 20px;
+		  color:white;
+		  }
+     	.right
+			{
+        background-color:red;
+        float:right;
+        width:19%;
+        padding:100px;
+        margin-top:7px;
+        text-align:center;
+        height:1200px;
+        color:black;
+			 }
+        </style>
+</head>
+<body style="color:black; background-color:black;">
+    <div  style="background-color:red; font-family:algerian; padding:10px;text-align:center;">
+<h1>Nokia</h1>
+    </div>
+	<div style="overflow:auto">
+    <div class="menu">
+    	<img src="pic19.jpg">
+    	<br><br><br><br><br><br><br><br><br><br>
+    	<img src="pic38.jpg" height="300px" width="300px">
+      <br><br><br><br><br><br><br><br>
+      <img src="pic39.jpg" width="300px" height="300px">
+    	<br>
+    	</div>
+	<div class="main">
+		<br>
+	
+	<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+<a href="https://www.nokia.com/phones/en_in/nokia-6-plus/?gclid=EAIaIQobChMIqtWxs9Dm4QIVEh4rCh1hMgRmEAAYASAAEgJd7fD_BwE&gclsrc=aw.ds"><img src="pic74.jpg" style="width:100%"></a> 
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <a href="https://www.nokia.com/phones/en_int/nokia-7/?gclid=EAIaIQobChMI05SU09Dm4QIVRA4rCh0EZQmAEAAYASAAEgLh7_D_BwE&gclsrc=aw.ds#nokia-7"><img src="pic75.jpg" style="width:100%"></a> 
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+<a href="https://www.gsmarena.com/nokia_8_sirocco-9087.php"> <img src="pic76.jpg" style="width:100%"></a> 
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+	</div>
+	<div class="right">
+		<p><b>
+	Nokia Corporation is a Finnish multinational telecommunications, information technology, and consumer electronics company, founded in 1865. Nokia's headquarters are in Espoo, in the greater Helsinki metropolitan area. In 2017, Nokia employed approximately 102,000 people across over 100 countries, did business in more than 130 countries, and reported annual revenues of around €23 billion. Nokia is a public limited company listed on the Helsinki Stock Exchange and New York Stock Exchange. It is the world's 415th-largest company measured by 2016 revenues according to the Fortune Global 500, having peaked at 85th place in 2009. It is a component of the Euro Stoxx 50 stock market index.The company has had various industries in over 150 years. It was founded as a pulp mill and had long been associated with rubber and cables, but since the 1990s focuses on large-scale telecommunications infrastructures, technology development, and licensing.
+
+</b></p>
+	</div>
+</body>
+</html>

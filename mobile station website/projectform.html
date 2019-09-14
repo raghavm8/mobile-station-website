@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<title>form</title>
+<head>	
+	<style>
+	.detail h1{
+		margin: 0;
+		padding: 0,0,20px;
+		text-align: center;
+		font-size: 22px;
+	}
+/*	.detail p{
+		margin: 0;
+		padding: 0;
+    	text-align: center;
+		font-size: 20px;
+		font-weight: bold;
+
+	}*/
+	.detail input{
+		border: none;
+		border-bottom: 1px solid #fff;
+		background: transparent;
+		outline: none;
+		height: 20px;
+		/*right: 50%;*/
+		left: 50%;
+		color: white;
+
+	}
+		body{
+			margin: 0;
+			padding: 0;
+			background: url(pic1.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			height: 540px;
+			background-position: center;
+		}
+		.detail{
+			width: 320px;
+			height: 500px;
+			background: url(pic2.jpg);
+			color: #fff;
+			background-size: cover;
+			top: 50%;
+			left: 50%;
+			bottom: 50%;
+			position: absolute;
+			transform: translate(-50%,-50%);
+			box-sizing: border-box;
+			padding: 70px 30px;
+			align-items: center;
+			align-self: center;
+		}
+		.detail input[type="submit"]{
+				border: none;
+				outline: none;
+				height: 48px;
+				background: transparent;
+				color: #fff;
+				font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+
+<script type='text/javascript'>
+
+function formValidator(){
+	var firstname = document.getElementById('firstname');
+	var addr = document.getElementById('addr');
+	var zip = document.getElementById('zip');
+	var state = document.getElementById('state');
+	var username = document.getElementById('username');
+	var email = document.getElementById('email');
+	
+	// Check each input in the order that it appears in the form!
+	if(isAlphabet(firstname, "Please enter only letters for your name")){
+		if(isAlphanumeric(addr, "Numbers and Letters Only for Address")){
+			if(isNumeric(zip, "Please enter a valid Phone number")){
+				if(madeSelection(state, "Please Choose a State")){
+					if(lengthRestriction(username,0,8)){
+						if(emailValidator(email, "Please enter a valid email address")){
+							return true;
+						}
+					}
+				}
+			}
+		}
+	}
+	return false;	
+}
+function notEmpty(elem, helperMsg){
+	if(elem.value.length == 0){
+		alert(helperMsg);
+		elem.focus(); // set the focus to this input
+		return false;
+	}
+	return true;
+}
+function isNumeric(elem, helperMsg){
+	var numericExpression = /^[0-9]+$/;
+	if(elem.value.match(numericExpression)){
+		return true;
+	}else{
+		alert(helperMsg);
+		elem.focus();
+		return false;
+	}
+}
+function isAlphabet(elem, helperMsg){
+	var alphaExp = /^[a-zA-Z]+$/;
+	if(elem.value.match(alphaExp)){
+		return true;
+	}else{
+		alert(helperMsg);
+		elem.focus();
+		return false;
+	}
+}
+function isAlphanumeric(elem, helperMsg){
+	var alphaExp = /^[0-9a-zA-Z]+$/;
+	if(elem.value.match(alphaExp)){
+		return true;
+	}else{
+		alert(helperMsg);
+		elem.focus();
+		return false;
+	}
+}
+function lengthRestriction(elem, min, max){
+	var uInput = elem.value;
+	if(uInput.length >= min && uInput.length <= max){
+		return true;
+	}else{
+		alert("Please enter between " +min+ " and " +max+ " characters");
+		elem.focus();
+		return false;
+	}
+}
+function madeSelection(elem, helperMsg){
+	if(elem.value == "Please Choose"){
+		alert(helperMsg);
+		elem.focus();
+		return false;
+	}else{
+		return true;
+	}
+}
+function emailValidator(elem, helperMsg){
+	var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+	if(elem.value.match(emailExp)){
+		return true;
+	}else{
+		alert(helperMsg);
+		elem.focus();
+		return false;
+	}
+}
+</script>
+<div class="detail">
+<h1>Sign up</h1>
+<br><br><br>
+<form onsubmit='return formValidator()'>
+<!--<p>Name:</p>--> 
+<input type='text' id='firstname' placeholder="Name" required /><br><br>
+<!--<p>Address</p>-->
+<input type='text' id='addr' placeholder="Address" required /><br><br>
+<!--<p>City</p>-->
+<input type='text' id='firstname' placeholder="City" required /><br><br>
+<!--<p>State</p>--> 
+<input type='text' id='firstname' placeholder="State" required /><br><br>
+<!--<p>Phone Number</p>-->
+<input type='text' id='zip' placeholder="Phone Number" required /><br><br>
+<!--<p>Password(Max 8 characters):</p>-->
+<input type='Password' id='Password' placeholder="Password" required /><br><br>
+<!--<p>Email:</p>-->
+<input type='text' id='email' placeholder="Email" required /><br/><br/>
+<input type='submit' value='Check'> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<a href='companies.html'><button onclick="alert('data saved')">Submit</button></a>
+</form>
+</div>
+</body>
+</html>

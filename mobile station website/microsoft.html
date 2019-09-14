@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Microsoft</title>
+        <style>	
+        * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}	
+		 .menu{
+		 margin-top: 7px;
+		 float:left;
+		 width:16%;
+		 text-align:center;
+		 height:1200px;
+		 background-color:red;
+		 padding-top: 50px;
+		 }
+		 .main{
+		  float:left;
+		  width:65%;
+		  padding:0 20px;
+		  color:white;
+		  }
+     	.right
+			{
+        background-color:red;
+        float:right;
+        width:19%;
+        padding:100px;
+        margin-top:7px;
+        text-align:center;
+        height:1200px;
+        color:black;
+			 }
+        </style>
+</head>
+<body style="color:black; background-color:black;">
+    <div  style="background-color:red; font-family:algerian; padding:10px;text-align:center;">
+<h1>Microsoft</h1>
+    </div>
+	<div style="overflow:auto">
+    <div class="menu">
+    	<img src="pic29.jpg">
+    	<br><br><br><br><br><br><br><br><br><br>
+    	<img src="pic38.jpg" height="300px" width="300px">
+      <br><br><br><br><br><br><br><br>
+      <img src="pic39.jpg" width="300px" height="300px">
+    	<br>
+    	</div>
+	<div class="main">
+		<br>
+	
+	<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 2</div>
+<a href="https://support.microsoft.com/en-us/help/4340298/support-options-for-nokia-lumia-and-feature-phone-devices"><img src="pic78.jpg" style="width:100%"></a> 
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 2</div>
+  <a href="https://support.microsoft.com/en-us/help/4340298/support-options-for-nokia-lumia-and-feature-phone-devices"><img src="pic77.jpg" style="width:100%"></a> 
+  <div class="text">Caption Two</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+<!--  <span class="dot" onclick="currentSlide(3)"></span> -->
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+	</div>
+	<div class="right">
+		<p><b>
+	Microsoft Mobile was a subsidiary of Microsoft involved in the development and manufacturing of mobile phones. Based in Espoo, Finland, it was established in 2014 following the acquisition of Nokia's Devices and Services division by Microsoft in a deal valued at €5.4 billion, which was completed in April 2014.Nokia's then-CEO, Stephen Elop, joined Microsoft as president of its Devices division following the acquisition, and the acquisition was part of Steve Ballmer's strategy to turn Microsoft into a "devices and services" company. Under a 10-year licensing agreement, Microsoft Mobile held rights to sell feature phones running the S30+ platform under the Nokia brand.Originally Microsoft had established a major partnership with Nokia in 2011, in which the company exclusively produced smartphones using the Windows Phone platform, and promoted Microsoft services on its feature phone products (including Bing search). Microsoft also licensed Nokia Maps data for its own mapping services. While Nokia's resultant Lumia range had the largest market share out of all Windows Phone vendors, Nokia's overall market share was falling rapidly due to competition from other major vendors, resulting in a dire financial situation.
+</b></p>
+	</div>
+</body>
+</html>

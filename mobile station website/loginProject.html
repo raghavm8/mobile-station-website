@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<title>log in page</title>
+<head>
+	<style>
+		body{
+			background-image: url(pic4.jpg);
+			background-size: cover;
+			background-position: center;  
+		}
+		.form{
+			width: 500px;
+			height: 450px;
+			margin: 60px auto 0;
+			position: relative;
+			background: rgba(0,0,0,0.4);
+			text-align: center;
+			margin-top: 60px;
+			padding: 35px;
+			border: 3px solid #fff;
+			border-radius: 70px 0 70px 0;
+
+		}
+		.form h2{
+			margin-bottom: 45px;
+			color: #fff;	
+		}
+		.image-area{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background: tomato;
+			position: absolute;
+			top: -5%;
+			left: 45%;
+
+		}
+		.image-area img{
+			width: 60%;
+			padding: 10px;
+		}
+		input{
+			width: 100%;
+			height: 40px;
+			border-radius: 15px 0 15px 0;
+			border: 1px solid #fff;
+			margin-bottom: 10px;
+			background-color: transparent;
+			color: #fff;
+		}
+		.form p{
+			text-align: left;
+			color: #fff;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		.btn{
+			display: inline-block;
+			height: 40px;
+			width: 150px;
+			line-height: 40px;
+				overflow: hidden ;
+				position: relative;
+				text-align: center;
+				background: tomato;
+				border-radius: 25px;
+				color: #fff;
+				text-transform: uppercase;
+				margin-top: 20px;
+				/*cursor: pointer;*/
+				text-decoration: none;
+		}
+		.btn-text{
+			display: block;
+			height: 100%;
+			position: relative;
+			top: 0;
+			transition: top 0.6s;
+			width: 100%;
+		}
+		.for-pass{
+			text-decoration: none;
+			display: block;
+			margin-top: 30px;
+			font-weight: bold;
+			font-size: 20px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		
+	</script>
+<div class="form">
+	<div class="image-area">
+	<img src="pic3.jpg">
+	</div>
+<h2>LogIn</h2>
+<p>Username</p>
+<input required placeholder="  Username" type="text" name="     Username" required>
+<p>Password</p>
+<input type="password" name="password" placeholder="   password" required>
+<br>
+<a href="companies.html" class="btn">
+	<span onclick="alert('welcome user!!!!!!   &nbsp press ok to continue')" class="btn-text">Log In</span>
+</a>
+<a href="#" class="for-pass">Forgot password</a>
+</div>
+</body>
+</html>
